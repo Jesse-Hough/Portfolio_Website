@@ -6,7 +6,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         prevArrow: '<button type="button" class="slick-prev slick-arrow"><span>&lt;</span></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow"><span>&gt;</span></button>',
     });
