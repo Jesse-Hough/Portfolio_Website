@@ -89,15 +89,31 @@ header {
     align-items: center;
 }
 
+/* Default: Single row for desktop view */
 header ul {
-    list-style: none;
-    display: ruby;
+    display: flex;
     justify-content: center;
+    flex-wrap: nowrap; /* No wrapping in desktop view */
     padding: 0;
+    list-style: none;
 }
 
 header li {
     margin: 0 15px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    header ul {
+        flex-wrap: wrap; /* Allow wrapping in mobile view */
+        justify-content: center;
+    }
+
+    header li {
+        width: 50%; /* Make each list item take half the width */
+        text-align: center;
+        margin: 10px 0; /* Add some margin for spacing */
+    }
 }
 
 header a {
