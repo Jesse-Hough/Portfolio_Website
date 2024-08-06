@@ -440,3 +440,178 @@ footer {
 #social-header {
     text-align: center;
 }
+
+/* Social button styles */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensures text is on the left and icon is on the right */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #333; /* Default background color */
+    color: white; /* Default text color */
+    border-radius: 4px;
+}
+
+.social-button.github {
+    background-color: #333;
+}
+
+.social-button.github:hover {
+    background-color: #444;
+}
+
+.social-button.linkedin {
+    background-color: #0077b5;
+}
+
+.social-button.linkedin:hover {
+    background-color: #005983;
+}
+
+.social-button i {
+    margin-left: 8px; /* Adds space between text and icon */
+}
+
+.slide-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures text is on the left and icon is on the right */
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent button */
+    width: 100%; /* Make link fill the button */
+}
+
+/* Your existing CSS */
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    width: 60px; /* Adjust width for smaller size */
+    height: 30px; /* Adjust height for smaller size */
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+    margin: 20px auto; /* Center the toggle switch and add vertical margin */
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 30px; /* Adjust height for smaller size */
+    background-color: var(--dark);
+    border-radius: 15px; /* Adjust border-radius for smaller size */
+    cursor: pointer;
+    border: 2px solid var(--dark); /* Adjust border size for smaller size */
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* Adjust border-radius for smaller size */
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 1px; /* Adjust top position for smaller size */
+    left: 1px; /* Adjust left position for smaller size */
+    width: 24px; /* Adjust width for smaller size */
+    height: 24px; /* Adjust height for smaller size */
+    border-radius: 50%;
+    -webkit-box-shadow: inset 8px -3px 0px 0px var(--light); /* Adjust shadow for smaller size */
+    box-shadow: inset 8px -3px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(30px); /* Adjust translateX for smaller size */
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Centering the toggle switch within the slide menu */
+#slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--footer-background-color);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+#close-menu {
+    align-self: flex-end; /* Align close button to the right */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    #slide-menu {
+        width: 200px; /* Adjust width for smaller screens */
+        left: -200px; /* Adjust initial position for smaller screens */
+    }
+
+    .toggle-switch {
+        width: 50px; /* Further adjust width for smaller screens */
+        height: 25px; /* Further adjust height for smaller screens */
+    }
+
+    .switch-label {
+        height: 25px; /* Adjust height for smaller size */
+        border: 2px solid var(--dark); /* Adjust border size for smaller size */
+    }
+
+    .slider::before {
+        top: 2px; /* Adjust top position for smaller size */
+        left: 1px; /* Adjust left position for smaller size */
+        width: 18px; /* Adjust width for smaller size */
+        height: 18px; /* Adjust height for smaller size */
+    }
+
+    .checkbox:checked ~ .slider::before {
+        -webkit-transform: translateX(26px); /* Adjust translateX for smaller size */
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+}
+
+#slide-menu hr {
+    border: 1px solid var(--text-color); /* Change this to your desired color */
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the hr and add vertical margin */
+}
+
+/* Responsive design for hr */
+@media (max-width: 768px) {
+    #slide-menu hr {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}

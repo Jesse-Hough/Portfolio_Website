@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Jesse Hough - Portfolio</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -109,8 +110,8 @@
             <div class="experience-container">
                 <div class="experience-item">
                     <h3>Software Engineer</h3>
-                    <h4>Company Name</h4>
-                    <p>January 2020 - Present</p>
+                    <h4>Contractor Connection</h4>
+                    <p>June 2023 - Present</p>
                     <ul>
                         <li>Developed large-scale Angular/.NET applications connected to SMSS databases.</li>
                         <li>Implemented RESTful services and APIs to streamline data processing and retrieval.</li>
@@ -126,10 +127,14 @@
             <div class="education-container">
                 <div class="education-item">
                     <h3>Bachelor's Degree in Information Technology</h3>
-                    <h4>University Name</h4>
-                    <p>Graduated: May 2019</p>
+                    <h4>Florida International University</h4>
+                    <p>Graduated: December 2023</p>
                 </div>
-                <!-- Add more educational qualifications as needed -->
+                <div class="education-item">
+                    <h3>Associate's Degree in Information Technology</h3>
+                    <h4>Hillsborough Community College</h4>
+                    <p>Graduated: December 2021</p>
+                </div>
             </div>
         </section>
 
@@ -184,11 +189,24 @@
     <!-- Slide Menu -->
     <div id="slide-menu">
         <button id="close-menu">X</button>
-        <button id="theme-toggle">Toggle Theme</button>
+        <div class="toggle-switch">
+            <label class="switch-label">
+                <input type="checkbox" class="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
         <h3 id="social-header">Find Me Here</h3>
         <hr>
-        <button id="theme-toggle"><a class="slide-link" href="https://github.com/Jesse-Hough" target="_blank">GitHub</a></button>
-        <button id="theme-toggle"><a class="slide-link" href="https://www.linkedin.com/in/jesse-hough" target="_blank">LinkedIn</a></button>
+        <button class="social-button github">
+            <a class="slide-link" href="https://github.com/Jesse-Hough" target="_blank">
+                GitHub <i class="fab fa-github"></i>
+            </a>
+        </button>
+        <button class="social-button linkedin">
+            <a class="slide-link" href="https://www.linkedin.com/in/jesse-hough" target="_blank">
+                LinkedIn <i class="fab fa-linkedin"></i>
+            </a>
+        </button>
     </div>
     <div id="overlay"></div>
 
